@@ -1,11 +1,5 @@
-<?php namespace index;
+<?php define("__INDEX__", __FILE__) OR exit();
 
-include_once "include/autoload.php";
+define("__ROOT__", dirname(__INDEX__)) OR exit;
 
-use activity;
-
-final class main extends activity {
-	protected static function activity() {
-		var_dump(self::$instance);
-	}
-}
+define("__AUTOLOAD__", include_once "include/autoload.php") OR exit;
