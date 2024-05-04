@@ -1,5 +1,15 @@
-<?php define("__INDEX__", __FILE__) OR exit();
+<?php namespace activity;
 
-define("__ROOT__", dirname(__INDEX__)) OR exit;
+define("__INDEX__", __FILE__) OR exit;
 
-define("__AUTOLOAD__", include_once "include/autoload.php") OR exit;
+define("__SYSTEM__", include_once "include/system.php");
+
+use activity;
+
+final class index extends activity {
+	protected static function main(array $argv = [], array $envp = []) {
+		system("clear");
+		echo "hello world!";
+		echo PHP_EOL;
+	}
+}
